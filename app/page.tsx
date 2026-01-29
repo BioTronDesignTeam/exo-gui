@@ -1,4 +1,4 @@
-import { BatteryStatus, Header, EmergencyStop, ParameterTuning } from "./components";
+import { BatteryStatus, Header, EmergencyStop, ParameterTuning, MotorControl} from "./components";
 import DummyWebsocketDisplay from "./components/DummyWebsocketDisplay";
 
 export default function Home() {
@@ -9,6 +9,7 @@ export default function Home() {
         <BatteryStatus />
         <EmergencyStop />
         <ParameterTuning />
+        <MotorControl />
         <DummyWebsocketDisplay/>
       </main>
     </div>

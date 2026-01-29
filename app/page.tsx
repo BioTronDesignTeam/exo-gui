@@ -1,4 +1,4 @@
-import { BatteryStatus, Header } from "./components";
+import { BatteryStatus, Header, EmergencyStop, ParameterTuning } from "./components";
 import DummyWebsocketDisplay from "./components/DummyWebsocketDisplay";
 
 export default function Home() {
@@ -7,6 +7,8 @@ export default function Home() {
       <Header />
       <main className="bg-blue-950 h-screen p-8">
         <BatteryStatus />
+        <EmergencyStop />
+        <ParameterTuning />
         <DummyWebsocketDisplay/>
       </main>
     </div>

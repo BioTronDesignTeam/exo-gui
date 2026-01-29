@@ -8,7 +8,7 @@ Explain new changes below in short bullet points.
 # Testing
 Explain tests that you ran to verify code functionality.
 - [ ] I have unit-tested this PR. Otherwise, explain why it cannot be unit-tested.
-- [ ] I have tested this PR on a board if the code will run on a board (Only required for firmware developers).
+- [ ] I have verified this PR in sim or real-world (if applicable)
 - [ ] I have included screenshots of the tests performed below.
 
 # Outstanding Changes

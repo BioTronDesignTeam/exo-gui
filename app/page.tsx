@@ -1,4 +1,4 @@
-import { BatteryStatus, Header, EmergencyStop, ParameterTuning } from "./components";
+import { BatteryStatus, Header, EmergencyStop, ParameterTuning, MotorControl} from "./components";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
         <BatteryStatus />
         <EmergencyStop />
         <ParameterTuning />
+        <MotorControl />
       </main>
     </div>
   );

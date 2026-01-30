@@ -13,6 +13,9 @@ log/
 # remove build host
 *build-host*
 
+#next
+.next/
+
 # dependencies
 *node_modules
 user-interface/.pnp
@@ -57,3 +60,6 @@ next-env.d.ts
 dist/
 .astro/
 docs/node_modules/*
+
+#python
+/backend/venv/

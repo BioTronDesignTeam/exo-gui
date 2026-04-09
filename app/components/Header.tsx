@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react'
+import EmergencyStop from './EmergencyStop'
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
         <a href="#" className="w-[150px] text-center rounded-full hover:font-bold">Data</a>
         <a href="#" className="w-[150px] text-center rounded-full hover:font-bold">Commands</a>
       </nav>
-      <button className="bg-red-600 text-white w-[200px] rounded-full font-bold text-xl">Emergency Stop</button>
+      <EmergencyStop />
     </header>
   )
 }

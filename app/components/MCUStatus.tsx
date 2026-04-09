@@ -15,7 +15,7 @@ const MCUStatus = () => {
   }
 
   return (
-    <div className="w-[350px] rounded-2xl bg-white py-[16px] px-[16px] border-[3px] border-black">
+    <div className="w-[350px] rounded-2xl bg-white py-[16px] px-[16px] border-[3px] border-black h-min">
       <div className="flex justify-between items-center">
         <h2 className="text-black font-bold text-2xl">MCU Status</h2>
         <span className={`h-4 w-4 rounded-full ${getCircleColour()}`}></span> 

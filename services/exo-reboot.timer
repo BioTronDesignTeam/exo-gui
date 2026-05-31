@@ -1,0 +1,10 @@
+[Unit]
+Description=Reboot the exo server daily at 03:00
+
+[Timer]
+OnCalendar=*-*-* 03:00:00
+Persistent=false
+Unit=exo-reboot.service
+
+[Install]
+WantedBy=timers.target

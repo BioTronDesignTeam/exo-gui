@@ -1,0 +1,17 @@
+[Unit]
+Description=exo telemetry backend (Go Fiber)
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=exo
+WorkingDirectory=/opt/exo/backend
+ExecStart=/opt/exo/backend/exo-backend
+Environment=PORT=8080
+EnvironmentFile=-/etc/exo/backend.env
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

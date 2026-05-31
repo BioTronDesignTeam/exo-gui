@@ -1,66 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-build/
-install/
-log/
-.vscode/
-.next
+# Folder-specific ignores live in frontend/, backend/, prisma/.
+# Keep this file to cross-cutting concerns only.
 
-# editor folders and files
-.settings/
-/.project
-/.idea
-*.launch
-
-# remove build host
-*build-host*
-
-#next
-.next/
-
-# dependencies
-*node_modules
-user-interface/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-user-interface/coverage
-
-# next.js
-user-interface/.next/
-user-interface/out/
-
-# production
-user-interface/build
-
-# misc
+# OS / editor (any directory)
 .DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Secrets / certs (any directory)
 *.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-# docs 
-dist/
-.astro/
-docs/node_modules/*
-
-#python
-/backend/venv/

@@ -1,6 +1,0 @@
-[Unit]
-Description=Scheduled full-system reboot for the exo server
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/systemctl reboot

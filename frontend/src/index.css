@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Class-based dark mode: `dark:` utilities respond to a `.dark` ancestor
+   (set on <html> by the inline script in index.html), not the OS preference. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+  }
+
+  /* Ease color changes app-wide so flipping light <-> dark cross-fades instead
+     of snapping. Only color properties transition, so layout and transform
+     animations (e.g. the toggle slide) are unaffected. */
+  *,
+  *::before,
+  *::after {
+    transition-property: color, background-color, border-color, fill, stroke;
+    transition-duration: 250ms;
+    transition-timing-function: ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

@@ -3,8 +3,8 @@
 Owns the Postgres schema (`schema.prisma`) and migrations for the telemetry
 pipeline.
 
-- **No models yet** — the telemetry schema is a deferred decision (see root
-  `CLAUDE.md`).
+- **No models yet** — the telemetry schema lands with ingest. Local
+  operator/session/guest_key tables were dropped (OAuthManager owns auth).
 - The `prisma-client-js` generator is a placeholder. The Go *runtime* query layer
   (pgx / sqlc / GORM) is also deferred; Prisma may end up migrations-only, since
   the official Prisma Go client was sunset in 2022.

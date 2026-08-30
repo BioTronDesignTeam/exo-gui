@@ -1,16 +1,21 @@
 # backend
 
-Go service for the exo telemetry pipeline.
+Go service for the exo telemetry pipeline. HTTP via **Fiber**. Operator login
+lives in **OAuthManager** — this process does not issue sessions.
 
-**Skeleton only.** Right now this is a stdlib `/health` endpoint on `:8080`
-(`PORT` overrides). The Fiber HTTP router, the WebSocket fan-out hub, and
-Postgres access land in later refactor chunks — see the root `CLAUDE.md`.
+## Routes
 
-## Run (inside the dev container)
+| Method | Path | Purpose |
+|--------|------|---------|
+| GET | `/health` | Liveness — `{"status":"ok"}` |
+
+Telemetry ingest and WebSocket fan-out land next. Device ingest will use
+per-machine API keys. Operator-facing routes will call OAuthManager
+`/v1/check`.
+
+## Run
 
 ```bash
-go run .
-curl localhost:8080/health   # {"status":"ok"}
+cd backend && go run .
+curl http://localhost:8080/health
 ```
-
-Module path: `github.com/BioTronDesignTeam/exo-gui/backend`

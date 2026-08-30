@@ -7,4 +7,5 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// Models deferred until the telemetry schema is decided — see root CLAUDE.md.
+// Telemetry models land with the ingest pipeline. Operator/session/guest_key
+// tables were a local auth copy and are dropped — OAuthManager owns that.
